@@ -12,10 +12,21 @@ export class HomeComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+  
   countClick() {
     this.clickCounter += 1;
   }
+
   decrementClick() {
     this.clickCounter -= 1;
+  }
+
+  setClasses() {
+    let myClasses = {
+      active: this.clickCounter > 4,
+      notactive: this.clickCounter <= 4
+    }
+
+    return myClasses
   }
 }
