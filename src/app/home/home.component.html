@@ -1,4 +1,4 @@
-<h1>Welcom!</h1>
+<h1>Welcome!</h1>
 
 <div class="play-container">
   <!-- event binding using (click) -- data binding with clickCounter which is defined in component.ts -->
@@ -11,4 +11,14 @@
     <br>
     <strong>You said: </strong> {{ name }}
   </p>
+</div>
+
+<div class="play-container">
+  <!-- If else to show ui based on counter state -->
+  <ng-template [ngIf]="clickCounter > 4" [ngIfElse]="none">
+    <p>Click counter is <strong>greater</strong> than 4</p>
+  </ng-template>
+  <ng-template #none>
+    <p>Click counter is <strong>not</strong> greater than 4</p>
+  </ng-template>
 </div>
