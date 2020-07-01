@@ -12,8 +12,8 @@
     <strong>You said: </strong> {{ name }}
   </p>
 </div>
-
-<div class="play-container">
+<!-- dynamic styling based on counter state -->
+<div class="play-container" [style.background-color]="clickCounter > 4 ? 'yellow' : 'lightgray'">
   <!-- If else to show ui based on counter state -->
   <ng-template [ngIf]="clickCounter > 4" [ngIfElse]="none">
     <p>Click counter is <strong>greater</strong> than 4</p>
