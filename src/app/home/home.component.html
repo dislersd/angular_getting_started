@@ -3,6 +3,7 @@
 <div class="play-container">
   <!-- event binding using (click) -- data binding with clickCounter which is defined in component.ts -->
   <p>You've clicked <button (click)="countClick()">this</button> {{ clickCounter }} times </p>
+  <button (click)="decrementClick()">decrement</button>
 </div>
 
 <div class="play-container">
@@ -12,8 +13,12 @@
     <strong>You said: </strong> {{ name }}
   </p>
 </div>
+
 <!-- dynamic styling based on counter state -->
-<div class="play-container" [style.background-color]="clickCounter > 4 ? 'yellow' : 'lightgray'">
+<div class="play-container" [ngStyle]="{
+  'background-color': clickCounter > 4 ? 'yellow' : 'lightgray',
+  'border': clickCounter > 4 ? '4px solid black' : 'none'
+}">
   <!-- If else to show ui based on counter state -->
   <ng-template [ngIf]="clickCounter > 4" [ngIfElse]="none">
     <p>Click counter is <strong>greater</strong> than 4</p>

@@ -15,4 +15,7 @@ export class HomeComponent implements OnInit {
   countClick() {
     this.clickCounter += 1;
   }
+  decrementClick() {
+    this.clickCounter -= 1;
+  }
 }
