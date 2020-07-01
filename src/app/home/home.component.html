@@ -4,3 +4,11 @@
   <!-- event binding using (click) -- data binding with clickCounter which is defined in component.ts -->
   <p>You've clicked <button (click)="countClick()">this</button> {{ clickCounter }} times </p>
 </div>
+
+<div class="play-container">
+  <!-- Two way data binding - recieves and sends info to component logic in component.ts -->
+  <p> <input type="text" [(ngModel)]="name">
+    <br>
+    <strong>You said: </strong> {{ name }}
+  </p>
+</div>
