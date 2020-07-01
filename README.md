@@ -1,6 +1,6 @@
 # MyApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.
+Angular app that works with routing and data fetching.
 
 ## Development server
 
